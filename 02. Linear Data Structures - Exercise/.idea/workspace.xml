@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e6ce6e6c-5dc5-4a0c-b347-5942b4e73cd2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/implementations/ReversedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/implementations/ReversedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/implementations/ReversedListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/implementations/ReversedListTest.java" afterDir="false" />
+    <list default="true" id="3d16c62a-8fa7-426b-ba50-1cde69ede95f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/target/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,20 +11,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/implementations/ReversedList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="70" column="40" selection-start-line="70" selection-start-column="40" selection-end-line="70" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/implementations/ReversedListTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1281">
-              <caret line="69" column="22" selection-start-line="69" selection-start-column="22" selection-end-line="69" selection-end-column="22" />
+            <state relative-caret-position="651">
+              <caret line="33" selection-start-line="33" selection-end-line="33" />
+              <folding>
+                <element signature="e#635#665#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -36,20 +27,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-  </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/main/java/implementations/ReversedList.java" />
-        <option value="$PROJECT_DIR$/src/test/java/implementations/ReversedListTest.java" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="145" />
-    <option name="y" value="25" />
-    <option name="width" value="1750" />
-    <option name="height" value="970" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -101,7 +78,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1584370236535" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1584370381325" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -119,45 +96,6 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ReversedListTest">
-    <configuration name="ReversedListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="LinearDS" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="implementations.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="implementations" />
-      <option name="MAIN_CLASS_NAME" value="implementations.ReversedListTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ReversedListTest.removeAt_indexElementsBounds_shouldShiftElementsRight" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="LinearDS" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="implementations.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="implementations" />
-      <option name="MAIN_CLASS_NAME" value="implementations.ReversedListTest" />
-      <option name="METHOD_NAME" value="removeAt_indexElementsBounds_shouldShiftElementsRight" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JUnit.ReversedListTest" />
-        <item itemvalue="JUnit.ReversedListTest.removeAt_indexElementsBounds_shouldShiftElementsRight" />
-      </list>
-    </recent_temporary>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -168,7 +106,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1584355435098</updated>
-      <workItem from="1584355436523" duration="1029000" />
+      <workItem from="1584355436523" duration="1256000" />
     </task>
     <servers />
   </component>
@@ -194,9 +132,12 @@
     <history-entry file="ReversedListTest_removeAt_indexElementsBounds_shouldShiftElementsRight - 2020.03.16 at 16h 50m 15s.xml">
       <configuration name="ReversedListTest.removeAt_indexElementsBounds_shouldShiftElementsRight" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ReversedListTest - 2020.03.16 at 16h 50m 21s.xml">
+      <configuration name="ReversedListTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1029000" />
+    <option name="totallyTimeSpent" value="1256000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -217,7 +158,7 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3286119" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -235,37 +176,5 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/implementations/ReversedList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="70" column="40" selection-start-line="70" selection-start-column="40" selection-end-line="70" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/implementations/ReversedListTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1281">
-          <caret line="69" column="22" selection-start-line="69" selection-start-column="22" selection-end-line="69" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>11</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>
