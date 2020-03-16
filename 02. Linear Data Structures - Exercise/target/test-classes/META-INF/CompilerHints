@@ -8,3 +8,4 @@ inline,benchmark/DoublyLinkedListBenchmarkTest.testAddFirst
 inline,benchmark/DoublyLinkedListBenchmarkTest.testAddLast
 inline,benchmark/DoublyLinkedListBenchmarkTest.testRemoveFirst
 inline,benchmark/DoublyLinkedListBenchmarkTest.testRemoveLast
+inline,benchmark/QueueBenchmarkTest.testAddInQueue

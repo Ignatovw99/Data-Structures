@@ -60,6 +60,18 @@ public class ReversedListTest {
     }
 
     @Test
+    public void removeAt_indexElementsBounds_shouldShiftElementsRight() {
+        reversedList.add(1);
+        reversedList.add(2);
+        reversedList.add(3);
+        reversedList.add(4);
+        reversedList.add(5);
+        reversedList.removeAt(0);
+        assertEquals(2, reversedList.get(3).intValue());
+        assertEquals(4, reversedList.size());
+    }
+
+    @Test
     public void testIterator() {
         List<Integer> elements = Arrays.asList(12, 13, 14, 15, 16);
         reversedList.add(elements.get(0));

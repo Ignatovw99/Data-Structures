@@ -18,15 +18,6 @@ public class ReversedList<E> implements interfaces.ReversedList<E> {
         size = 0;
     }
 
-    @Override
-    public void add(E element) {
-        if (size == capacity()) {
-            elements = resize();
-        }
-        elements[head++] = element;
-        size++;
-    }
-
     private Object[] resize() {
         int newCapacity = elements.length * 2;
         Object[] newElements = new Object[newCapacity];
@@ -34,6 +25,26 @@ public class ReversedList<E> implements interfaces.ReversedList<E> {
             newElements[i] = elements[i];
         }
         return newElements;
+    }
+
+    @SuppressWarnings("unchecked")
+    private E getAt(int index) {
+        return (E) elements[index];
+    }
+
+    private void ensureIndex(int index) {
+        if (size == 0 || index < 0 || index >= elements.length) {
+            throw new IndexOutOfBoundsException();
+        }
+    }
+
+    @Override
+    public void add(E element) {
+        if (size == capacity()) {
+            elements = resize();
+        }
+        elements[head++] = element;
+        size++;
     }
 
     @Override
@@ -53,23 +64,11 @@ public class ReversedList<E> implements interfaces.ReversedList<E> {
         return getAt(actualIndex);
     }
 
-    @SuppressWarnings("unchecked")
-    private E getAt(int index) {
-        return (E) elements[index];
-    }
-
-    private void ensureIndex(int index) {
-        if (size == 0 || index < 0 || index >= elements.length) {
-            throw new IndexOutOfBoundsException();
-        }
-    }
-
     @Override
     public void removeAt(int index) {
-        int actualIndex = head - index - 1;
-        ensureIndex(actualIndex);
-        for (int i = actualIndex + 1; i < head; i++) {
-            elements[i - 1] = elements[i];
+        ensureIndex(index);
+        for (int i = index; i < capacity() - 1; i++) {
+            elements[i] = elements[i + 1];
         }
         elements[--head] = null;
         size--;
