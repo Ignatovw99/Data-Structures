@@ -5,11 +5,16 @@ import implementations.Tree;
 import java.util.List;
 
 public interface AbstractTree<E> {
+
     void setParent(Tree<E> parent);
 
     void addChild(Tree<E> child);
 
     Tree<E> getParent();
+
+    List<Tree<E>> getChildren();
+
+    List<Tree<E>> getLeafs();
 
     E getKey();
 
