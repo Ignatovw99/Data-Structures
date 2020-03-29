@@ -17,7 +17,7 @@ public class BinarySearchTree<E extends Comparable<E>> {
 
         private Node<E> rightChild;
 
-		public Node(E value) {
+	public Node(E value) {
             this.value = value;
         }
 
@@ -60,7 +60,7 @@ public class BinarySearchTree<E extends Comparable<E>> {
         foreachInOrderTraversal(node.getRight(), consumer);
     }
 	
-	public void eachInOrder(Consumer<E> consumer) {
+    public void eachInOrder(Consumer<E> consumer) {
         foreachInOrderTraversal(root, consumer);
     }
 
