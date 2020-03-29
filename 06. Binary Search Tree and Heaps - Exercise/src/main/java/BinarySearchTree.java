@@ -60,7 +60,7 @@ public class BinarySearchTree<E extends Comparable<E>> {
         foreachInOrderTraversal(node.getRight(), consumer);
     }
 	
-	public void eachInOrder(Consumer<E> consumer) {
+    public void eachInOrder(Consumer<E> consumer) {
         foreachInOrderTraversal(root, consumer);
     }
 
