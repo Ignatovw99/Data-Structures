@@ -13,6 +13,19 @@ public class TwoThreeTree<K extends Comparable<K>> {
             this.leftKey = key;
         }
 
+        public TreeNode(K rootValue, K leftValue, K rightValue) {
+            this(rootValue);
+            leftChild = new TreeNode<>(leftValue);
+            rightChild = new TreeNode<>(rightValue);
+        }
+
+        public TreeNode(K root, TreeNode<K> left, TreeNode<K> right) {
+            leftKey = root;
+
+            leftChild = left;
+            rightChild = right;
+        }
+
         boolean isThreeNode() {
             return rightKey != null;
         }
@@ -27,7 +40,100 @@ public class TwoThreeTree<K extends Comparable<K>> {
     }
 
     public void insert(K key) {
+        if (root == null) {
+            root = new TreeNode<>(key);
+        } else {
+            TreeNode<K> newRoot = insert(root, key);
 
+            if (newRoot != null) {
+                root = newRoot;
+            }
+        }
+    }
+
+    private TreeNode<K> insert(TreeNode<K> node, K key) {
+        if (node.isLeaf()) {
+            if (node.isTwoNode()) {
+                if (node.leftKey.compareTo(key) < 0) {
+                    node.rightKey = key;
+                } else {
+                    node.rightKey = node.leftKey;
+                    node.leftKey = key;
+                }
+                //This indicates that no changes are required in the tree
+                return null;
+            } else {
+                K left = node.leftKey;
+                K middle = key;
+                K right = node.rightKey;
+
+                if (key.compareTo(node.leftKey) < 0) {
+                    left = key;
+                    middle = node.leftKey;
+                } else if (key.compareTo(node.rightKey) > 0) {
+                    middle = node.rightKey;
+                    right = key;
+                }
+
+                return new TreeNode<>(middle, left, right);
+            }
+        }
+
+        TreeNode<K> toFix;
+
+        if (node.isTwoNode() && node.leftKey.compareTo(key) > 0) {
+            toFix = insert(node.leftChild, key);
+        } else if (node.isTwoNode() && node.leftKey.compareTo(key) < 0) {
+            toFix = insert(node.rightChild, key);
+        } else if (node.isThreeNode() && node.leftKey.compareTo(key) > 0) {
+            toFix = insert(node.leftChild, key);
+        } else if (node.isThreeNode() && node.rightKey.compareTo(key) < 0) {
+            toFix = insert(node.rightChild, key);
+        } else {
+            toFix = insert(node.middleChild, key);
+        }
+
+        if (toFix == null) {
+            return null;
+        }
+
+        if (node.isTwoNode()) {
+            if (toFix.leftKey.compareTo(node.leftKey) < 0) {
+                node.rightKey = node.leftKey;
+                node.leftKey = toFix.leftKey;
+
+                node.leftChild = toFix.leftChild;
+                node.middleChild = toFix.rightChild;
+            } else {
+                node.rightKey = toFix.leftKey;
+
+                node.middleChild = toFix.leftChild;
+                node.rightChild = toFix.rightChild;
+            }
+
+            return null;
+
+        } else {
+            K promoteValue;
+            TreeNode<K> left;
+            TreeNode<K> right;
+
+            if (toFix.leftKey.compareTo(node.leftKey) < 0) {
+                promoteValue = node.leftKey;
+                left = toFix;
+                right = new TreeNode<>(node.rightKey, node.middleChild, node.rightChild);
+            } else if (toFix.leftKey.compareTo(node.rightKey) > 0) {
+                promoteValue = node.rightKey;
+                left = new TreeNode<>(node.leftKey, node.leftChild, node.middleChild);
+                right = toFix;
+            } else {
+                promoteValue = toFix.leftKey;
+                left = new TreeNode<>(node.leftKey, node.leftChild, toFix.leftChild);
+                right = new TreeNode<>(node.rightKey, toFix.rightChild, node.rightChild);
+            }
+
+            return new TreeNode<>(promoteValue, left, right);
+        }
     }
 
     public String getAsString() {

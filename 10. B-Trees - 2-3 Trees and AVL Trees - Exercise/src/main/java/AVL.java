@@ -26,15 +26,75 @@ public class AVL<T extends Comparable<T>> {
     }
 
     public void delete(T item) {
-        throw new UnsupportedOperationException();
+        root = delete(root, item);
+    }
+
+    private Node<T> delete(Node<T> node, T key) {
+        if (node == null) {
+            return null;
+        }
+
+        int cmp = key.compareTo(node.value);
+        if (cmp < 0) {
+            node.left = delete(node.left, key);
+        } else if (cmp > 0) {
+            node.right = delete(node.right, key);
+        } else {
+            if (node.left == null) {
+                return node.right;
+            }
+            if (node.right == null) {
+                return node.left;
+            }
+
+            Node<T> rightMin = getMin(node.right);
+
+            rightMin.right = deleteMin(node.right);
+            rightMin.left = node.left;
+
+            node = rightMin;
+        }
+
+        updateHeight(node);
+        return balance(node);
     }
 
     public void deleteMin() {
-        throw new UnsupportedOperationException();
+        root = deleteMin(root);
+    }
+
+    private Node<T> deleteMin(Node<T> node) {
+        if (node == null) {
+            return null;
+        }
+
+        if (node.left == null) {
+            return node.right;
+        }
+
+        node.left = deleteMin(node.left);
+        updateHeight(node);
+
+        return balance(node);
     }
 
     public void deleteMax() {
-        throw new UnsupportedOperationException();
+        root = deleteMax(root);
+    }
+
+    private Node<T> deleteMax(Node<T> node) {
+        if (node == null) {
+            return null;
+        }
+
+        if (node.right == null) {
+            return node.left;
+        }
+
+        node.right = deleteMax(node.right);
+        updateHeight(node);
+
+        return balance(node);
     }
 
     private void eachInOrder(Node<T> node, Consumer<T> action) {
@@ -133,6 +193,7 @@ public class AVL<T extends Comparable<T>> {
 
         return node;
     }
+
     private int balanceFactor(Node<T> node) {
         return height(node.left) - height(node.right);
     }
